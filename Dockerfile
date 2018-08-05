@@ -11,5 +11,5 @@ VOLUME ["/git"]
 EXPOSE 80
 
 CMD spawn-fcgi -s /run/fcgi.sock /usr/bin/fcgiwrap && \
-    envsubst < /etc/nginx/nginx.conf.template > /etc/nginx/nginx.conf && \
+    envsubst '\${SERVER_NAME}' < /etc/nginx/nginx.conf.template > /etc/nginx/nginx.conf && \
     nginx -g "daemon off;"
