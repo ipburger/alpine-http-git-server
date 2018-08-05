@@ -1,0 +1,13 @@
+version: '3'
+services:
+  git_server:
+    image: git_server
+    restart: always
+    container_name: git_server
+    volumes:
+      - /Users/vboufleur/Development/ipburger/test_repo_upload:/git
+    networks:
+      - git_net
+
+networks:
+  git_net:
