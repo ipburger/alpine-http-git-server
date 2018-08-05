@@ -3,6 +3,7 @@ A lightweight Nginx HTTP Git Server Docker image built on Alpine Linux.
 Mount git repos on:
   - /git
 
+Pass env var SERVER_NAME to specify which internal network name the git server will be accesible.
 
 Inspired on:
 
